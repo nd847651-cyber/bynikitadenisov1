@@ -1,0 +1,372 @@
+/* responsive.css - Исключительно для мобилок и планшетов */
+
+/* TABLETS (Планшеты) */
+@media (max-width: 1024px) {
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+    * { box-sizing: border-box; }
+    
+    .main, .page, .container, .heading, .history-main-content { 
+        max-width: 100%; 
+    }
+    
+    .main {
+        display: flex;
+        flex-direction: column;
+        padding: 90px 40px 40px;
+        height: auto;
+        overflow: visible;
+    }
+    
+    .main__header { align-self: flex-start; font-size: 24px; margin: 0 0 20px 0; padding: 0; }
+    .main__text { text-align: left; font-size: 18px; padding: 0; }
+    .main__button { align-self: flex-start; font-size: 28px; margin: 20px 0; }
+    
+    .heading-container { padding: 100px 0 20px 40px; }
+    .history-main-content { flex-direction: column; padding: 0 40px; gap: 40px; }
+}
+
+/* MOBILE (Телефоны) */
+@media (max-width: 768px) {
+    html, body { background: #ffffff !important; overflow-x: hidden !important; }
+    .page { width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+
+    /* ХЕДЕР */
+    .header { 
+        height: 60px !important; 
+        padding: 0 5px !important; 
+        display: flex !important; 
+        align-items: center !important; 
+    }
+
+    .header__section { 
+        display: grid !important; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important; 
+        width: 100% !important; 
+        align-items: center !important;
+    }
+
+    .header__item, .header__logo {
+        display: flex !important;
+        justify-content: center !important; 
+        align-items: center !important;
+        padding: 0 !important;
+    }
+
+    .header__item a, .search-input { 
+        font-size: 12px !important; 
+        white-space: nowrap !important; 
+    }
+
+    .search-input { 
+        width: 100% !important; 
+        max-width: 75px !important; 
+        text-transform: lowercase !important; 
+        text-align: center !important; 
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .logo { 
+        max-height: 28px !important; 
+        width: auto !important; 
+        display: block !important;
+    }
+    
+    /* ВИДЕО (ПОВОРОТ) */
+    .hero-video {
+        width: 100vw !important;
+        height: 100svh !important;
+        min-height: 100svh !important;
+        position: relative !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+    .hero-video__media, .hero-video video {
+        width: 100svh !important;
+        height: 100vw !important;
+        min-width: 100svh !important;
+        min-height: 100vw !important;
+        max-width: none !important; 
+        max-height: none !important; 
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) rotate(90deg) !important;
+        transform-origin: center center !important;
+        object-fit: cover !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* КОНТАКТЫ */
+    .main:has(img[src*="image14"]) {
+        height: calc(100vh - 60px); 
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+    .main:has(img[src*="image14"]) .main__image img {
+        max-height: 35vh;
+        width: auto;
+    }
+    .main:has(img[src*="image14"]) .main__text {
+        padding: 0;
+        margin-top: 20px;
+        justify-items: center;
+    }
+
+    /* ГАЛЕРЕЯ ИНТЕРЬЕРОВ */
+    .interior-gallery { margin-top: 20px !important; margin-bottom: 20px !important; display: flex !important; flex-direction: column !important; gap: 40px !important; padding: 0 20px !important; }
+    .interior-gallery__block { width: 100% !important; margin: 0 !important; display: flex !important; flex-direction: column !important; }
+    .interior-gallery__text { position: relative !important; inset: auto !important; width: 100% !important; text-align: left !important; font-size: 12px !important; margin-top: 10px !important; }
+    .image8, .image9 { width: 100% !important; height: auto !important; }
+
+    /* СЛАЙДЕР НА ГЛАВНОЙ */
+    .product-slider { display: flex !important; overflow-x: auto !important; padding: 12px 20px !important; }
+    .image, .product-card { flex: 0 0 45vw !important; aspect-ratio: 0.68 / 1 !important; width: 45vw !important; height: auto !important; }
+
+    /* ФУТЕР */
+    .footer { height: auto !important; padding: 20px 10px !important; position: relative !important; }
+    .footer__section { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 10px 30px !important; }
+    .footer__item:nth-child(3), .footer__item:nth-child(4) { display: none !important; }
+    .footer__item:last-child { width: 100% !important; font-size: 9px !important; text-align: center !important; }
+}
+
+/* =========================================
+   ФИКС СТРАНИЦЫ КОРЗИНА (cart.html)
+   ========================================= */
+@media (max-width: 768px) {
+    body:has(.popup-trigger) .main {
+        display: flex;
+        flex-direction: column;
+        padding: 80px 20px 30px; 
+        min-height: calc(100vh - 60px);
+        overflow: hidden;
+    }
+
+    body:has(.popup-trigger) .main__header {
+        text-align: center;
+        align-self: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    body:has(.popup-trigger) .container {
+        width: 100%;
+        margin: 0;
+        display: block;
+    }
+
+    body:has(.popup-trigger) .main__button {
+        margin: auto auto 0 auto; 
+        text-align: center;
+        align-self: center;
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    /* Очищенный слайдер корзины без !important */
+    .switch {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .wrapper {
+        order: 1;
+        display: flex;
+        width: 200%;
+        height: auto;
+        transition: transform 0.4s ease;
+    }
+
+    .wrapper .box {
+        width: 50%;
+        margin: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper .box img {
+        width: 100%; 
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .controls {
+        order: 2;
+        position: relative;
+        margin: 20px 0 0 20px;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ЦЕНТРИРОВАНИЕ СТРАНИЦЫ НОВОСТИ В МОБИЛЬНОЙ ВЕРСИИ */
+@media (max-width: 768px) {
+    .main:has(img[src*="image13"]) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .main:has(img[src*="image13"]) .main__header {
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+
+    .main:has(img[src*="image13"]) .main__text {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main:has(img[src*="image13"]) .main__links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-left: 0;
+        margin-top: 15px;
+    }
+    
+    .main:has(img[src*="image13"]) .main__image {
+        margin-bottom: 20px;
+    }
+}
+
+/* =========================================
+   ФИКС СТРАНИЦЫ ИСТОРИЯ (history.html)
+   ========================================= */
+@media (max-width: 768px) {
+    .history-page .page {
+        display: block;
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+        overflow-y: auto;
+    }
+
+    .history-page .heading-container {
+        padding: 80px 0 20px 20px;
+    }
+
+    .history-page .heading {
+        margin: 0;
+        font-size: 36px;
+    }
+
+    .history-page .history-main-content {
+        flex-direction: column-reverse;
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .history-page .container {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .history-page .custom-image-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    details summary {
+        font-size: 18px;
+        padding: 10px 5px;
+    }
+    
+    .history-panel p {
+        font-size: 16px;
+    }
+}
+
+/* =========================================
+   АДАПТИВ СТРАНИЦЫ КАТАЛОГА (CATALOG)
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .catalog-wrapper {
+        padding: 90px 20px 40px;
+    }
+    
+    .catalog-toolbar {
+        padding: 0; 
+    }
+
+    /* Добавляем это для адаптации категорий */
+    .catalog-categories {
+        gap: 20px; /* Чуть меньше отступ между категориями для планшета */
+    }
+    
+    .catalog-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px 10px;
+    }
+
+    .filter-panel__inner {
+        overflow-x: auto; /* Позволяем таблице скроллиться вбок на планшетах и телефонах */
+    }
+    
+    .filter-column {
+        min-width: 160px; /* Гарантируем, что колонки не будут слишком узкими */
+    }
+    
+    .filter-panel__inner::-webkit-scrollbar {
+        display: none; /* Прячем страшный системный ползунок */
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-wrapper {
+        padding: 80px 10px 30px;
+    }
+
+    .catalog-toolbar {
+        font-size: 10px;
+        margin-bottom: 20px;
+        padding: 0; 
+    }
+
+    /* Добавляем это для адаптации категорий на телефоне */
+    .catalog-categories {
+        gap: 15px;
+        overflow-x: auto; 
+        white-space: nowrap;
+        padding-bottom: 2px;
+    }
+    
+    .catalog-categories::-webkit-scrollbar {
+        display: none;
+    }
+
+    .catalog-toolbar__center {
+        display: none; 
+    }
+    
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px 10px;
+    }
+}

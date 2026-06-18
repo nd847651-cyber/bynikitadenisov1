@@ -1,0 +1,112 @@
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+	font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.heading-container {
+    margin: 0;
+    padding: 130px 0 20px 220px;
+}
+
+.heading {
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 1.2;
+    display: block;
+    width: fit-content;
+}
+
+.history-main-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 100px 0 220px;
+    flex-grow: 1;
+    gap: 80px;
+}
+
+.custom-image-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: auto;
+}
+
+.custom-image {
+    max-width: 100%;
+    max-height: 55vh;
+    object-fit: contain;
+}
+
+.container {
+    width: 520px;
+    flex-shrink: 0;
+}
+
+.detail-item {
+    margin: 10px 0;
+    width: 100%;
+}
+
+details {
+    list-style: none;
+    margin-top: 10px;
+}
+
+details summary {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 10px;
+    text-align: left;
+    list-style: none;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary::marker {
+    content: '';
+}
+
+details p {
+    font-size: 18px;
+    margin-top: -5px;
+    color: black;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.history-panel {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height 0.55s ease, opacity 0.35s ease, transform 0.35s ease;
+}
+
+.detail-item.is-open .history-panel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.history-panel p {
+    margin: 0 10px 10px 10px;
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALOG - PAGE 2</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body class="catalog-page">
+    <div class="page">
+        
+        <div class="header">
+            <div class="header__section">
+                <div class="header__item headerButton"><a href="history.html">история</a></div>
+                <div class="header__item headerButton"><a href="catalog.html">каталог</a></div>
+                <div class="header__item header__logo">
+                    <a href="index.html"><img src="image/logo.png" alt="Логотип" class="logo"></a>
+                </div>
+                <div class="header__item headerButton">
+                    <form action="search_results.html" method="get">
+                        <input type="text" name="query" placeholder="поиск" class="search-input">
+                    </form>
+                </div>
+                <div class="header__item headerButton"><a href="cart.html">корзина</a></div>
+            </div>
+        </div>
+
+        <div class="catalog-wrapper">
+            <div class="catalog-toolbar">
+                <div class="catalog-toolbar__right" id="filterToggle">FILTER</div>
+            </div>
+
+            <div class="filter-panel" id="filterPanel">
+                <div class="filter-panel__wrapper">
+                    <div class="filter-panel__inner">
+                        <div class="filter-column">
+                            <div class="filter-title">SIZE</div>
+                            <div class="filter-label">OS</div>
+                            <div class="filter-label">XXS</div>
+                            <div class="filter-label">XS</div>
+                            <div class="filter-label">S</div>
+                            <div class="filter-label">M</div>
+                            <div class="filter-label">L</div>
+                            <div class="filter-label">XL</div>
+                            <div class="filter-label">XXL</div>
+                        </div>
+                        
+                        <div class="filter-column">
+                            <div class="filter-title">COLOR</div>
+                            <div class="filter-label">BLACK</div>
+                            <div class="filter-label">DARK GREY</div>
+                            <div class="filter-label">DARK STONE</div>
+                            <div class="filter-label">DUSTY GREEN</div>
+                            <div class="filter-label">GREY</div>
+                            <div class="filter-label">LIGHT STONE</div>
+                            <div class="filter-label">LIQUID METAL</div>
+                            <div class="filter-label">WHITE</div>
+                        </div>
+
+                        <div class="filter-column">
+                            <div class="filter-title">TYPOLOGY</div>
+                            <div class="filter-label">BAGS</div>
+                            <div class="filter-label">BELTS</div>
+                            <div class="filter-label">BOTTOMS</div>
+                            <div class="filter-label">DENIM</div>
+                            <div class="filter-label">FOOTWEAR</div>
+                            <div class="filter-label">OUTERWEAR</div>
+                            <div class="filter-label">SHIRTS</div>
+                            <div class="filter-label">T-SHIRTS</div>
+                        </div>
+
+                        <div class="filter-column">
+                            <div class="filter-title">MATERIAL</div>
+                            <div class="filter-label">ACETATE</div>
+                            <div class="filter-label">COTTON</div>
+                            <div class="filter-label">LEATHER</div>
+                            <div class="filter-label">METAL</div>
+                            <div class="filter-label">NYLON</div>
+                            <div class="filter-label">POLYESTER</div>
+                            <div class="filter-label">WOOL</div>
+                        </div>
+
+                        <div class="filter-column">
+                            <div class="filter-title">SORT</div>
+                            <div class="filter-label">CATALOG</div>
+                            <div class="filter-label">NEW IN</div>
+                            <div class="filter-label">PRICE ASCENDING</div>
+                            <div class="filter-label">PRICE DESCENDING</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="catalog-grid">
+                <!-- НОВЫЕ ТОВАРЫ ДЛЯ СТРАНИЦЫ 2 И 3 (ВМЕСТО 3D МОДЕЛЕЙ) -->
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img9.png" alt="LEATHER TRENCH" class="default">
+                        <img src="image/new_img9.png" alt="LEATHER TRENCH HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">LEATHER TRENCH</div>
+                        <div class="catalog-item__price">85.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img10.png" alt="TECHNICAL VEST" class="default">
+                        <img src="image/new_img10.png" alt="TECHNICAL VEST HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">TECHNICAL VEST</div>
+                        <div class="catalog-item__price">24.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img11.png" alt="WIDE LEG TROUSERS" class="default">
+                        <img src="image/new_img11.png" alt="WIDE LEG TROUSERS HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">WIDE LEG TROUSERS</div>
+                        <div class="catalog-item__price">34.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img12.png" alt="MOHAIR SWEATER" class="default">
+                        <img src="image/new_img12.png" alt="MOHAIR SWEATER HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">MOHAIR SWEATER</div>
+                        <div class="catalog-item__price">41.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <!-- ПЕРЕМЕШАННЫЕ ТОВАРЫ ДЛЯ СТРАНИЦЫ 2 -->
+                
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img8.png" alt="SIGNATURE T-SHIRT" class="default">
+                        <img src="image/new_img8.png" alt="SIGNATURE T-SHIRT HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">SIGNATURE T-SHIRT</div>
+                        <div class="catalog-item__price">15.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img3.png" alt="CARGO PANTS" class="default">
+                        <img src="image/new_img3.png" alt="CARGO PANTS HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">CARGO PANTS</div>
+                        <div class="catalog-item__price">29.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img6.png" alt="TAILORED TROUSERS" class="default">
+                        <img src="image/new_img6.png" alt="TAILORED TROUSERS HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">TAILORED TROUSERS</div>
+                        <div class="catalog-item__price">30.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img1.png" alt="GRAPHIC LONGSLEEVE" class="default">
+                        <img src="image/new_img1.png" alt="GRAPHIC LONGSLEEVE HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">GRAPHIC LONGSLEEVE</div>
+                        <div class="catalog-item__price">18.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+                
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img7.png" alt="STRUCTURAL SHIRT" class="default">
+                        <img src="image/new_img7.png" alt="STRUCTURAL SHIRT HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">STRUCTURAL SHIRT</div>
+                        <div class="catalog-item__price">22.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img2.png" alt="OVERSIZED HOODIE" class="default">
+                        <img src="image/new_img2.png" alt="OVERSIZED HOODIE HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">OVERSIZED HOODIE</div>
+                        <div class="catalog-item__price">25.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img5.png" alt="HEAVYWEIGHT SWEATER" class="default">
+                        <img src="image/new_img5.png" alt="HEAVYWEIGHT SWEATER HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">HEAVYWEIGHT SWEATER</div>
+                        <div class="catalog-item__price">35.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+
+                <a href="#" class="catalog-item">
+                    <div class="catalog-item__image">
+                        <img src="image/img4.png" alt="DENIM JACKET" class="default">
+                        <img src="image/new_img4.png" alt="DENIM JACKET HOVER" class="hover">
+                    </div>
+                    <div class="catalog-item__info">
+                        <div class="catalog-item__title">DENIM JACKET</div>
+                        <div class="catalog-item__price">42.000 <span class="currency">р</span></div>
+                        <div class="catalog-item__sizes">44 46 48 50 52 54</div>
+                    </div>
+                </a>
+            </section>
+
+            <!-- ПАГИНАЦИЯ (СТРАНИЦА 2) -->
+            <div class="catalog-pagination">
+                <a href="catalog.html">PREV</a>
+                <span>2 / 3</span>
+                <a href="page3.html">NEXT</a>
+            </div>
+
+        </div>
+        
+        <div class="footer">
+            <div class="footer__section">
+                <div class="footer__item"><p>support@bynikitadenisov.com</p></div>
+                <div class="footer__item"><p></p></div>
+                <div class="footer__item"><p></p></div>
+                <div class="footer__item"><p></p></div>
+                <div class="footer__item"><p>&copy; 2026 BYNIKITADENISOV︱RIGHTS RESERVED</p></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Скрипты -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterToggle = document.getElementById('filterToggle');
+            const filterPanel = document.getElementById('filterPanel');
+
+            if (filterToggle && filterPanel) {
+                filterToggle.addEventListener('click', function () {
+                    filterToggle.classList.toggle('is-active');
+                    filterPanel.classList.toggle('is-open');
+                });
+            }
+
+            const filterLabels = document.querySelectorAll('.filter-label');
+            filterLabels.forEach(label => {
+                label.addEventListener('click', function() {
+                    this.classList.toggle('is-selected');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
